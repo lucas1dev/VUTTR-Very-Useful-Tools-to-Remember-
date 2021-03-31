@@ -37,7 +37,6 @@ const AddTool = () => {
             };
            await services.addTools(tool);
            window.location.reload(false);
-           alert('Tool added successfully!')
         }catch(error){
             console.log(error)
             alert('Add tool failed!')
