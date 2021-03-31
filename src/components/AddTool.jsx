@@ -1,7 +1,7 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Button, Form, ListGroup, ModalBody, ModalFooter } from 'react-bootstrap';
+import { Button, Form, ModalBody, ModalFooter } from 'react-bootstrap';
 import services from '../services'
 
 const AddTool = () => {
@@ -76,12 +76,12 @@ const AddTool = () => {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Tags</Form.Label>
-                    <div class="tags-input">
+                    <div className="tags-input">
                         <ul id="tags">
                             {tags.map((tag, index) =>(
-                                <li key={index} class="tag">
-                                    <span class='tag-title'>{tag}</span>
-                                    <span class='tag-close-icon' onClick={() => removeTag(index)}><FontAwesomeIcon icon={faTimes}/></span>
+                                <li key={index} className="tag">
+                                    <span className='tag-title'>{tag}</span>
+                                    <span className='tag-close-icon' onClick={() => removeTag(index)}><FontAwesomeIcon icon={faTimes}/></span>
                                 </li>
                             ))}
                         </ul>

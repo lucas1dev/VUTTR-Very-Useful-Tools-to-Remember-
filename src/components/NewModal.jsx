@@ -8,28 +8,22 @@ import AddTool from './AddTool'
 
 export default class NewModal extends React.Component{
     
-
     constructor(props)
     {
-        
         super(props);
         this.state = {
             show:false,
         }
-        
     }
 
-    
     handleModal(){
         this.setState({show:!this.state.show})
     }
 
     render(){
-        
-
         return(
-            <>
-            <button class="btn buttonNew" type="button" onClick={()=>{this.handleModal()}}><FontAwesomeIcon icon={faPlus} /> Add</button>
+        <>
+            <button className="btn buttonNew" type="button" onClick={()=>{this.handleModal()}}><FontAwesomeIcon icon={faPlus} /> Add</button>
             <Modal className="modalNewTool" show={this.state.show}
             onHide={()=>this.handleModal()}
             centered
