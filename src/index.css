@@ -31,6 +31,49 @@ h1{
   font-size: 2.2rem;
 }
 
+.search-group {
+  display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.search-group:focus-within {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.search-group input {  
+  flex: 1;
+  border: none;
+  height: auto;
+  padding: 0 0 0 5px;
+  
+}
+
+.search-group input:focus {
+  outline: transparent;
+  border: none;
+  box-shadow:none;
+}
+
+.search-group-icon svg{
+  color: #DEDCE1;
+  font-size: 12px;
+}
+
+.check-group{
+  margin-top: 6px;
+}
+
 
 /*Tool List Content*/
 
@@ -67,6 +110,10 @@ h1{
   opacity: 1;
 }
 
+.tagsItem{
+  font-weight: 600;
+  padding-left: 3px;
+}
 
 /* MODAL */
 
@@ -179,3 +226,5 @@ ul#tags {
   background: #fff;
   cursor: pointer;
 }
+
+

@@ -31,7 +31,7 @@ const ListTool = ({ id,title, link, description, tags }) => {
                 <Row>
                     <Col>
                         <p>{description}</p>
-                        {!tags ? <span className="font-monospace">no tag</span> : tags.map((tag, j) => <span className="font-monospace" key={j}> #{tag} </span>)}
+                        {!tags ? <span className="tagsItem">no tag</span> : tags.map((tag, j) => <span className="tagsItem" key={j}> #{tag} </span>)}
                     </Col>
                 </Row>
             </Col>

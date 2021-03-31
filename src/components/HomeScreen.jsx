@@ -100,17 +100,18 @@ const HomeScreen = () => {
                         {/* Seletores */}
                         <Row>
                             <Col sm="4" >
-                                <div class="input-group">
-                                    <span class="input-group-text"><i><FontAwesomeIcon icon={faSearch} /></i></span>
-                                    <input type="text" class="form-control" placeholder="node" aria-label="tags" aria-describedby="button-addon2"
+                                <div className="search-group">
+                                    <span class="search-group-icon "><FontAwesomeIcon icon={faSearch} /></span>
+                                    <input
+                                        type="text" class="form-control" placeholder="node" aria-label="tags" aria-describedby="button-addon2"
                                         onChange={e => setToolSearch(e.target.value)}
                                         value={search}
-                                        onKeyUp={document.getElementById('only-tag').checked ? getSearchTagTool : getSearchTools}
+                                        onKeyUp={ event => document.getElementById('only-tag').checked ? getSearchTagTool : getSearchTools}   
                                     />
                                 </div>
                             </Col>
                             <Col>
-                                <div class="form-check">
+                                <div class="form-check check-group">
                                     <input type="checkbox" class="form-check-input" id="only-tag" onClick={document.getElementById('only-tag').checked ? getSearchTools : getSearchTagTool} />
                                     <label class="form-check-label" for="only-tag">seach in tags only</label>
                                 </div>
@@ -124,6 +125,7 @@ const HomeScreen = () => {
                         <Row className="toolList">
                             {tools.map(toolItem => (
                                 <ListTool
+                                    key={toolItem.id}
                                     id={toolItem.id}
                                     title={toolItem.title}
                                     link={toolItem.link}
